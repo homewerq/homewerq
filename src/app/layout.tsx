@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
-import { HomeIcon, SunIcon } from 'lucide-react'
+import { HomeIcon, SunIcon, UserIcon } from 'lucide-react'
 import Link from 'next/link'
 import { ReactNode } from 'react'
 import * as React from 'react'
@@ -59,6 +59,7 @@ export default function RootLayout({
                 icon={<HomeIcon />}
                 href="/"
               />
+              <NavItem content="登录" icon={<UserIcon />} href="/signin" />
               <ThemeToggle>
                 <NavItem icon={<SunIcon />} href="#" />
               </ThemeToggle>
