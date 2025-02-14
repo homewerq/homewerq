@@ -12,14 +12,14 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Homewerq',
-  description: '开源作业分发/追踪系统',
+  title: process.env.SITE_NAME || 'Homewerq',
+  description: process.env.SITE_DESCRIPTION || '开源作业分发/追踪系统',
 }
 
 const navItems: { icon?: ReactNode; content: string; href: string }[] = [
   {
     icon: <HomeIcon />,
-    content: 'Class Name',
+    content: process.env.SITE_NAME || 'Homewerq',
     href: '/',
   },
 ]
