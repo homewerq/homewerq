@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 }
 
 const NavItem = (props: {
-  icon?: ReactNode
+  icon: ReactNode
   content?: string
   href: string
 }) => (
@@ -28,13 +28,9 @@ const NavItem = (props: {
     className="motion-safe:transition-spacing motion-safe:ease-out motion-safe:duration-300 motion-safe:hover:px-6 flex items-center justify-center px-4 border-r [&>svg]:w-[1rem] [&>svg]:h-[1rem]"
     href={props.href}
   >
-    {props.icon ? (
-      <>
-        {props.icon}
-        {props.content && <span className="ml-1">{props.content}</span>}
-      </>
-    ) : (
-      props.content
+    {props.icon}
+    {props.content && (
+      <span className="max-[300px]:hidden ml-1">{props.content}</span>
     )}
   </Link>
 )
