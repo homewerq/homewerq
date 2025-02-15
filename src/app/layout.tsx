@@ -55,11 +55,7 @@ export default function RootLayout({
         >
           <div className="flex flex-col h-screen">
             <nav className="h-10 border-b flex flex-row text-sm leading-wtf">
-              <NavItem
-                content={process.env.SITE_NAME || 'Homewerq'}
-                icon={<HomeIcon />}
-                href="/"
-              />
+              <NavItem content={SITE_NAME} icon={<HomeIcon />} href="/" />
               <NavItem content="登录" icon={<UserIcon />} href="/signin" />
               <ThemeToggle>
                 <NavItem icon={<SunIcon />} href="#" />
