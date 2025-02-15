@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { ReactNode } from 'react'
 import * as React from 'react'
 import { ThemeToggle } from '@/components/theme-toggle'
+import { SITE_DESCRIPTION, SITE_NAME } from '@/lib/constants'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -14,8 +15,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: process.env.SITE_NAME || 'Homewerq',
-  description: process.env.SITE_DESCRIPTION || '开源作业分发/追踪系统',
+  title: SITE_NAME,
+  description: SITE_DESCRIPTION,
 }
 
 const NavItem = (props: {
